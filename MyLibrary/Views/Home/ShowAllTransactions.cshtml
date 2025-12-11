@@ -1,0 +1,30 @@
+﻿@model IEnumerable<ShowAllTransactionViewModel>
+<table class=table table-striped">
+    <thead>
+        <tr>
+           @*  <th>MemberName</th> *@
+            <th>BookName</th>
+            <th>BorrowDate</th>
+            <th>DueDate</th>
+            <th>ReturnDate</th>
+            <th>RenewalCount</th>
+            <th>LateFee</th>
+        </tr>
+    </thead>
+    <tbody>
+       @foreach(var item in Model)
+        {
+            <tr>
+              @*   <td>@item.MemberName</td> *@
+                <td>@item.BookTitle</td>
+                <td>@item.BorrowDate</td>
+                <td>@item.DueDate</td>
+                <td>@item.ReturnDate</td>
+                <td>@item.RenewalCount</td>
+                <td>@(item.LateFee?"Have Fine":"No Fine")</td>              
+                <td><a asp-action="Details" asp-route-id="@item.TransactionId" class="btn btn-primary">Details</a></td>
+
+            </tr>
+        }
+    </tbody>
+</table>

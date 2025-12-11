@@ -1,0 +1,15 @@
+﻿@model BorrowTransactionViewModel
+<form asp-action="AddBorrowTransaction">
+<div>
+        <label>Select Book To Borrow</label>
+        <select asp-items="@Model.AllBooks"
+                asp-for="@Model.BookId">
+        </select>
+</div>
+<div>
+    <input  asp-for="MemberId" value="@Model.MemberId" type="hidden"/>
+</div>
+<div>
+    <input  type="submit" value="Transact"/>
+</div>
+</form>

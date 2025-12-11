@@ -1,0 +1,31 @@
+﻿@model transactionDetailsViewModel
+<table class="table table-striped">
+    <thead>
+        <tr>
+            
+            <th></th>
+            <th>Fine MemberName</th>
+            <th>Fine BorrowDate</th>
+            <th>Fine Statues</th>
+            <th>Fine DueDate</th>
+        @*     <th>Fine Paymentreason</th>  *@    
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Model.MemberName</td>
+            <td>@Model.BorrowDate</td>
+            <td>@Model.StatusstatusBorrowTransaction</td>
+            <td>@Model.DueDate</td>
+            <td>@if(Model.LateFee)
+                {
+                    <td>
+                        <a asp-action="fineDetalies" class="btn btn-outline-info">Fine Details</a>
+                    </td>
+                }
+            </td>
+          @*   <td>@Model.pa</td> *@
+            
+        </tr>
+    </tbody>
+</table>

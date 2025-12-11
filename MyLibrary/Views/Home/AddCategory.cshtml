@@ -1,0 +1,16 @@
+﻿@model AddCotegoryViewModel
+<form asp-action="AddCategory">
+    <div>
+        <label asp-for="Name">Enter Category Name</label>
+        <input  asp-for="Name"/>
+        <span asp-validation-for="Name"></span>
+    </div>
+    <div>
+        <label asp-for="Description">Enter Category Description</label>
+        <input asp-for="Description" />
+        <span asp-validation-for="Description"></span>
+    </div>
+    <div>
+        <input  type="submit" value="Add Category" class="btn btn-primary"/>
+    </div>
+</form>

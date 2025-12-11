@@ -1,0 +1,74 @@
+﻿@model AddBookViewModel
+<form asp-action="AddBook" enctype="multipart/form-data">
+    <div>
+        <label asp-for="ISBN">Enter ISBN </label>
+        <input asp-for="ISBN" />
+        <span asp-validation-for="ISBN"></span>
+    </div>
+    <div>
+        <label asp-for="Publisher">Enter Publisher </label>
+        <input asp-for="Publisher" />
+        <span asp-validation-for="Publisher"></span>
+    </div>
+    <div>
+        <label asp-for="Title">Enter Title </label>
+        <input asp-for="Title" />
+        <span asp-validation-for="Title"></span>
+    </div>
+    <div>
+        <label asp-for="Description">Enter Description </label>
+        <input asp-for="Description" />
+        <span asp-validation-for="Description"></span>
+    </div>
+    <div>
+        <label asp-for="PublicationYear">Enter PublicationYear </label>
+        <input asp-for="PublicationYear" />
+        <span asp-validation-for="PublicationYear"></span>
+    </div>
+    <div>
+        <label asp-for="TotalCopies">Enter TotalCopies </label>
+        <input asp-for="TotalCopies" />
+        <span asp-validation-for="TotalCopies"></span>
+    </div>
+    <div>
+        <label asp-for="AvailableCopies">Enter AvailableCopies </label>
+        <input asp-for="AvailableCopies" />
+        <span asp-validation-for="AvailableCopies"></span>
+    </div>
+    <div>
+        <label asp-for="ShelfLocation">Enter ShelfLocation </label>
+        <input asp-for="ShelfLocation" />
+        <span asp-validation-for="ShelfLocation"></span>
+    </div>
+    <div>
+        <label asp-for="CreatedDate">Enter CreatedDate </label>
+        <input asp-for="CreatedDate" />
+        <span asp-validation-for="CreatedDate"></span>
+    </div>
+    <div>
+        <label asp-for="IsActive">Enter IsActive </label>
+        <input asp-for="IsActive"  />
+        <span asp-validation-for="IsActive"></span>
+    </div>
+    <div>
+        <label asp-for="Author">Enter Author </label>
+        <input asp-for="Author"  />
+        <span asp-validation-for="Author"></span>
+    </div>
+    <div>
+        <label>Select Category</label>
+        <select
+            asp-items="Model.AllCategory"
+         asp-for="CategoryId"
+              >
+            <option value=""> Select Category</option>
+        </select>
+    </div>
+    <div>
+        <label>Select Image For Book</label>
+        <input  type="file" asp-for="CoverImageUrl"/>
+    </div>
+    <div>
+        <input  type="submit" value="Add Book" class="btn btn-primary"/>
+    </div>
+</form>

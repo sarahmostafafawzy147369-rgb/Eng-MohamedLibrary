@@ -1,0 +1,25 @@
+﻿@model IEnumerable<ShowAllBooksViewModel>
+<table class=" table table-bordered table-striped ">
+    <thead>
+        <tr>
+            <th>Book ISBN</th>
+            <th>Book Author</th>
+            <th>Book Title</th>
+            <th>Book Category</th>
+            <th>Image</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+          @foreach(var b in Model)
+            {
+                <td>@b.ISBN</td>
+                <td>@b.Author</td>
+                <td>@b.Title</td>
+                <td>@b.Category</td>
+                <td><img src="~/Images/@b.ImagUrl" class="rounded-circle" style="width:100px;height:100px" /></td>
+               
+            }
+        </tr>
+    </tbody>
+</table>
